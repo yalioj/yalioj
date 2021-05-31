@@ -48,6 +48,12 @@
                 </div>
               </div>
             </div>
+	    <div class="field">
+                <div class="ui radio checkbox">
+                  <input <% if (contest.id) { %>disabled <% } %>type="radio" name="type" id="type-goi" value="goi"<% if (contest.type === 'goi') { %> checked="checked"<% } %>>
+                  <label for="type-acm">GTOI</label>
+                </div>
+              </div>
             <div class="field">
                 <label>排行参数（格式：<code>{ "题目 ID": 分值倍数 }</code>）</label>
                 <input type="text" name="ranking_params" value="<%= contest.ranklist ? JSON.stringify(contest.ranklist.ranking_params) : '' %>">
